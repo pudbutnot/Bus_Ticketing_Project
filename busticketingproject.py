@@ -19,17 +19,16 @@ with open('C:/Users/N1401842/OneDrive - Nottingham Trent University/mobile_produ
         category = lines ['category_title']
         if category not in listOfCategories:
             listOfCategories.append(category)
-            listOfCodes.append(code)
             cat1 = Category(category, code)
             listOfCatClasses.append(cat1)
             #print("For" , cat1.GetCategory(), "enter", cat1.GetCode())
             code += 1
             
 print("Please choose a category of ticket")
-for cat in listOfCatClasses:
-    print("For" , cat.GetCategory(), "enter", cat1.GetCode())
+for idx, cat in enumerate(listOfCatClasses):
+    print("For" , cat.GetCategory(), "enter", idx)
 choice = int(input("Enter your choice: "))
-print("you chose ", listOfCatClasses[choice].GetCategory())
+print("You picked:", listOfCatClasses[choice].GetCategory())
 #print(lines['category_title', "contains", lines['category_description'])
 
 
