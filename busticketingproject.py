@@ -12,7 +12,7 @@ class Category:
 listOfCatClasses = []
 listOfCategories = []
 listOfCodes = []
-with open('C:/Users/N1401842/Projects/BusTicketPurchaseProject/mobile_products.csv', mode = 'r')as file:
+with open('C:/Users/N1401842/OneDrive - Nottingham Trent University/mobile_products.csv', mode = 'r')as file:
     csvFile = csv.DictReader(file)
     code = 0
     for lines in csvFile:
