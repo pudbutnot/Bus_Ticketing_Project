@@ -1,5 +1,6 @@
 import csv
 
+print("Welcome to the NCTX Buses App")
 class Category:
     def __init__(self, category, code):
         self.category = category
@@ -32,4 +33,4 @@ print("You picked:", listOfCatClasses[choice].GetCategory())
 #print(lines['category_title', "contains", lines['category_description'])
 
 
-        
+  
