@@ -1,6 +1,15 @@
 import csv
 
 greeting="""Welcome to the NCTX Buses App"""
+print(greeting)
+response=input("""Are you a customer or an admin?
+Answer C for Customer and A for Admin: """)
+print("You entered", response)
+if response == 'C':
+    print("Please choose a category of ticket")
+else:
+    quit()
+    S
 class Category:
     def __init__(self, category, code):
         self.category = category
@@ -25,13 +34,10 @@ with open('C:/Users/N1401842/OneDrive - Nottingham Trent University/mobile_produ
             #print("For" , cat1.GetCategory(), "enter", cat1.GetCode())
             code += 1
             
-print("Please choose a category of ticket")
 for idx, cat in enumerate(listOfCatClasses):
     print("For" , cat.GetCategory(), "enter", idx)
 choice = int(input("Enter your choice: "))
 print("You picked:", listOfCatClasses[choice].GetCategory())
 #print(lines['category_title', "contains", lines['category_description'])
-
-
 
 
