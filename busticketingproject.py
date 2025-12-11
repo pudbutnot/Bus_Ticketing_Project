@@ -49,7 +49,8 @@ with open('C:/Users/N1401842/OneDrive - Nottingham Trent University/mobile_produ
     for lines in csvFile:
         if lines['category_title'] == chosen_category:
             topup_options.append(lines['topup_title'])
-            topup_price.append(lines['topup_price_in_pence'])
+            price_in_pounds = int(lines['topup_price_in_pence'])/100
+            topup_price.append(price_in_pounds)
             
 for idx, option in enumerate(topup_options):
     print("For", option, "enter", idx)
@@ -57,5 +58,9 @@ topup_choice= int(input("Enter your top_up choice: "))
 chosen_topup = topup_options[topup_choice]
 chosen_price= topup_price[topup_choice]
 print("You picked:", chosen_topup)
-print(f"This ticket costs {chosen_price} pounds. Would you like to purchase it?")
+print(f"This ticket costs £{chosen_price: .2f}")
+
+a= input(""" Would you like to purchase this ticket?
+Answer Y for Yes and N for No: """)
+print( "You entered", a)
 
