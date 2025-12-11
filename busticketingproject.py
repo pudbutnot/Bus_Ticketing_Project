@@ -64,5 +64,5 @@ a= input("""Would you like to purchase this ticket?
 Answer Y for Yes and N for No: """)
 print( "You entered", a)
 if a == 'Y':
-    print("You have purchased a {chosen_topup} ticket.")
+    print(f"You have purchased a {chosen_topup} ticket.")
 
