@@ -55,7 +55,7 @@ for idx, option in enumerate(topup_options):
     print("For", option, "enter", idx)
 topup_choice= int(input("Enter your top_up choice: "))
 chosen_topup = topup_options[topup_choice]
-chosen_price= topup_prices[topup_choice]
+chosen_price= topup_price[topup_choice]
 print("You picked:", chosen_topup)
 print(f"This ticket costs {chosen_price} pounds. Would you like to purchase it?")
 
