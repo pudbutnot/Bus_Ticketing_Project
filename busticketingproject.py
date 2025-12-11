@@ -43,14 +43,19 @@ print("You picked:", chosen_category)
 
 print("Please choose a top-up type")
 topup_options = []
+topup_price = []
 with open('C:/Users/N1401842/OneDrive - Nottingham Trent University/mobile_products.csv', mode = 'r')as file:
     csvFile = csv.DictReader(file)
     for lines in csvFile:
         if lines['category_title'] == chosen_category:
             topup_options.append(lines['topup_title'])
+            topup_price.append(lines['topup_price_in_pence'])
             
 for idx, option in enumerate(topup_options):
     print("For", option, "enter", idx)
 topup_choice= int(input("Enter your top_up choice: "))
-print("You picked:", topup_options[topup_choice])
+chosen_topup = topup_options[topup_choice]
+chosen_price= topup_prices[topup_choice]
+print("You picked:", chosen_topup)
+print(f"This ticket costs {chosen_price} pounds. Would you like to purchase it?")
 
