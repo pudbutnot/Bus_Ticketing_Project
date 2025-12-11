@@ -58,9 +58,11 @@ topup_choice= int(input("Enter your top_up choice: "))
 chosen_topup = topup_options[topup_choice]
 chosen_price= topup_price[topup_choice]
 print("You picked:", chosen_topup)
-print(f"This ticket costs £{chosen_price: .2f}")
+print(f"This ticket costs £{chosen_price: .2f}")#https://pythonguides.com/format-numbers-as-currency-in-python/
 
-a= input(""" Would you like to purchase this ticket?
+a= input("""Would you like to purchase this ticket?
 Answer Y for Yes and N for No: """)
 print( "You entered", a)
+if a == 'Y':
+    print("You have purchased a {chosen_topup} ticket.")
 
