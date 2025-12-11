@@ -9,7 +9,6 @@ if response == 'C':
     print("Please choose a category of ticket")
 else:
     quit()
-    S
 class Category:
     def __init__(self, category, code):
         self.category = category
@@ -37,7 +36,21 @@ with open('C:/Users/N1401842/OneDrive - Nottingham Trent University/mobile_produ
 for idx, cat in enumerate(listOfCatClasses):
     print("For" , cat.GetCategory(), "enter", idx)
 choice = int(input("Enter your choice: "))
-print("You picked:", listOfCatClasses[choice].GetCategory())
+chosen_category=listOfCatClasses[choice].GetCategory()
+print("You picked:", chosen_category)
 #print(lines['category_title', "contains", lines['category_description'])
 
+
+print("Please choose a top-up type")
+topup_options = []
+with open('C:/Users/N1401842/OneDrive - Nottingham Trent University/mobile_products.csv', mode = 'r')as file:
+    csvFile = csv.DictReader(file)
+    for lines in csvFile:
+        if lines['category_title'] == chosen_category:
+            topup_options.append(lines['topup_title'])
+            
+for idx, option in enumerate(topup_options):
+    print("For", option, "enter", idx)
+topup_choice= int(input("Enter your top_up choice: "))
+print("You picked:", topup_options[topup_choice])
 
