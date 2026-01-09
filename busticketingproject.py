@@ -23,14 +23,14 @@ else:
 
 admin_choice= input("Enter your choice:")
 
-if admin_choice= "1":
+if admin_choice=="1":
     print("\n--- All Products ---")
     with open('C:/Users/N1401842/OneDrive - Nottingham Trent University/mobile_products.csv', mode = 'r')as file:
-    csvFile = csv.DictReader(file)
-    for row in csvFile:
-        price=int(row['topup_price_in_pence']) /100
-        print(f"{row['category_title'} - {row['topup_title']} - £{price:.2f}")
-    quit()
+        csvFile = csv.DictReader(file)
+        for row in csvFile:
+            price=int(row['topup_price_in_pence']) /100
+            print(f"{row['category_title']} - {row['topup_title']} - £{price:.2f}")
+            quit()
 
 elif admin_choice == "2":
     products[]
