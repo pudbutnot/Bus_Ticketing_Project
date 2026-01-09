@@ -2,8 +2,16 @@ import csv
 
 greeting="""Welcome to the NCTX Buses App"""
 print(greeting)
-response=input("""Are you a customer or an admin?
-Answer C for Customer and A for Admin: """)
+
+try:
+    response=input("Are you a customer or an admin? (C/A):").upper()
+    if response not in ['C' , 'A']:
+        raise ValueError("You have entered an invalid input. Please enter either C or A")
+except ValueError as e:
+    print("Error:", e)
+    quit()
+finally:
+    print("You have entered a valid input")
 print("You entered", response)
 if response == 'C':
     print("Please choose a category of ticket")
