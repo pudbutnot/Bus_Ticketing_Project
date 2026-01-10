@@ -1,6 +1,7 @@
 # BusTicketPurchaseProject
 A bus ticketing purchase project
 Use Case 1 Set up the category class.
+
 The program uses functions to load categories from the CSV file.
 It uses functions to load top-up options for the selected category.
 It uses a function to save each purchase into the purchases file.
