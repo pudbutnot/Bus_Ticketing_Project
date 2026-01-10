@@ -1,7 +1,12 @@
 # BusTicketPurchaseProject
 A bus ticketing purchase project
 Use Case 1 Set up the category class.
-
+Use Case 2 The customer selects a category, and the system loads all top-up options for that category.
+Use Case 3 The system displays all top-up options and prices for the chosen category.
+Use Case 4 The customer selects a top-up, and the system shows the price of the ticket.
+Use Case 5 The customer confirms the purchase, and the system saves the ticket to the purchases file.
+Use Case 6 The admin views all products, and the system displays every category, top-up and price.
+Use Case 7 The admin edits a product price, and the system updates the CSV file with the new price.
 The program uses functions to load categories from the CSV file.
 It uses functions to load top-up options for the selected category.
 It uses a function to save each purchase into the purchases file.
